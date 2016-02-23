@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+    <title>BJS_TS</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<link rel="stylesheet" href="css/main.css">  
+	<link rel="stylesheet" href="css/jquery.toastmessage.css"> 
+</head> 
+<body>
+	<!-- Motion detection Canvases -->
+	<video id="webcam" width="256" height="192" autoplay></video>
+    <canvas id="canvas-source" width="256" height="192"></canvas>
+	<canvas id="canvas-blended" width="256" height="192"></canvas> 
+	<canvas id="canvas-tmp" width="256" height="192"></canvas> 
+	
+	<!-- Babylon JS Canvas -->
+	<canvas id="renderCanvas"></canvas>
+	
+	
+	<!-- Start Screen -->
+	<div id="start_screen">
+	    <div id="volume_setting" class="setting_class">
+			<i id="volume_up" class="material-icons">volume_up</i>
+			<i id="volume_off" class="material-icons">volume_off</i>
+		</div>
+		<div id="controll_setting" class="setting_class"> 
+			<i id="chose_webcam" class="material-icons btn_icons">videocam</i>
+			<i id="chose_keyboard" class="material-icons btn_icons">keyboard</i> 
+		</div>
+		<div id="debug_setting" class="setting_class"> 
+			<i id="debug_on" class="material-icons btn_icons">build</i>
+			<i id="debug_off" class="material-icons btn_icons">play_arrow</i> 
+		</div>
+	
+		<div id="start_header">PuncH Sucker</div>
+		<div class="start_buttons" id="start_game">Start Punching!</div>
+		<div class="start_buttons" id="get_info">How is this working!?</div>
+	</div>
+	
+	<!-- Game Screen --> 
+	<div id="game_screen"> 
+		<div id="stats_punches"><span>Score:</span><div>0</div></div>
+		<div id="stats_time"><span>Time Left:</span><div>XX</div></div>
+	</div>
+	
+	<!-- Finish Screen -->
+	<div id="finish_screen">
+		<div id="score"><span>Score:</span><div>0</div></div>
+		<div class="start_buttons" id="restart">Let me punch AGAIN!</div>
+		<div class="start_buttons" id="end_game">Please let me leave this!!</div>
+	</div>
+</body>  
+<script src="libs/Oimo.js"></script>
+<script src="libs/hand.js"></script>
+<script src="libs/babylon.2.3.max.js"></script>
+
+<script src="libs/jquery-1.11.3.min.js"></script>
+<script src="libs/jquery.toastmessage.js"></script>
+<script src="libs/state-machine.js"></script>
+<script src="libs/compatibility.js"></script>
+
+
+<script src="src/sounds.js"></script>
+<script src="src/motionDetection.js"></script>
+<script src="src/environment.js"></script>
+<script src="src/keys.js"></script>
+<script src="src/punchers.js"></script>
+<script src="src/game.js"></script>
+<script src="src/main.js"></script>
+
+</html>

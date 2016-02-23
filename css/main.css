@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'sucker_font_jcregular';
+    src: url('font/sucker_font_jc_fonts-webfont.eot');
+    src: url('font/sucker_font_jc_fonts-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/sucker_font_jc_fonts-webfont.woff2') format('woff2'),
+         url('font/sucker_font_jc_fonts-webfont.woff') format('woff'),
+         url('font/sucker_font_jc_fonts-webfont.ttf') format('truetype'),
+         url('font/sucker_font_jc_fonts-webfont.svg#sucker_font_jcregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+	overflow: hidden;
+	width   : 100%;
+	height  : 100%;
+	margin  : 0; 
+	padding : 0;
+	font-family: 'sucker_font_jcregular';
+	font-size: 17px;
+    font-weight: 400;
+}
+#renderCanvas { 
+	width   : 100%;
+	height  : 100%;
+}
+
+
+#canvas-source{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+	display: none;
+}
+
+#canvas-blended{
+    display: none;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+}
+
+#canvas-tmp{
+	display: none;
+}
+
+#webcam{
+	display: none;
+}
+
+/* Start Screen */
+#start_screen{
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	position: fixed;
+	background: rgba(0, 0, 0, 0.2);
+}
+#start_header{
+	width: 100%;
+	text-align: center;
+	font-size: 80px;
+	color: #E91e63;
+	margin-top: 7%;
+	margin-bottom: 7%;
+}
+.start_buttons{
+	font-family: 'Roboto';
+	width: 290px;
+	background: rgba(0, 0, 0, 0.8);
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	cursor: pointer;
+	text-align: center;
+	margin-bottom: 4%;
+	color: white;
+	font-size: 23px;
+} 
+.start_buttons:hover{
+	background: rgba(0,0,0,0.87);
+}
+#start_game{
+
+}
+#get_info{
+	
+}
+
+/* Game Screen */
+#game_screen{
+	display: none;
+}
+#stats_time, #stats_punches{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100px;
+	height: 40px;
+	color: #E91e63;
+	padding-left: 29px;
+	padding-top: 20px;
+	font-size: 27px;
+}
+#stats_punches{
+	left: auto;
+	right: 0px;
+}
+#stats_punches span, #stats_time span{
+	color: white;
+	font-size: 18px;
+}
+#stats_punches div, #stats_time div{
+	margin-top: 6px; 
+}
+	 
+/* Finish Screen */
+#finish_screen{
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	position: fixed;
+	background: rgba(0, 0, 0, 0.3);
+}
+#score{
+	color: #E91e63;
+	font-size: 100px;
+	width: 100%;
+	padding-top: 1px;
+	height: 203px;
+	text-align: Center;
+	margin-bottom: 30px;
+}
+#score span{
+	color: white;
+	font-size: 25px;
+}
+#restart{
+
+}
+#end_game{
+
+}
+	
+	
+.setting_class{
+	color: white;
+	position: fixed;
+	top: 18px;
+	right: 30px; 
+	cursor: pointer;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	z-index: 3;
+}
+.setting_class i{
+	font-size: 38px; 
+}
+#controll_setting{
+    top: 80px;
+}
+#debug_setting{
+	top: 145px;
+}
+#chose_keyboard{
+    display: none;
+}
+#volume_off{
+    display: none;
+}
+#debug_on{
+	display: none;
+}
+	
+@media screen and (max-width: 660px) {
+    html, body{
+        font-weight: 300;
+    }
+	#start_header{
+		width: 100%;
+		text-align: center;
+		font-size: 54px;
+		color: #E91e63;
+		margin-top: 56px;
+		margin-bottom: 45px;
+	}
+	.start_buttons{
+		width: 100%;
+		margin-bottom: 5%;
+		font-size: 20px;
+	} 
+	#controll_setting, #debug_setting{
+		display: none;
+	}
+	.setting_class{
+		right: 10px;
+		top: 10px;
+	}
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
