@@ -139,13 +139,20 @@ html, body {
 	color: white;
 	font-size: 25px;
 }
-#restart{
-
-}
-#end_game{
-
-}
-	
+.end_buttons{
+	font-family: 'Roboto';
+	width: 290px;
+	background: rgba(0, 0, 0, 0.8);
+    border: 2px solid white;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	cursor: pointer;
+	text-align: center;
+	margin-bottom: 4%;
+	color: white;
+	font-size: 23px;
+} 	
 	
 .setting_class{
 	color: white;
@@ -195,7 +202,13 @@ html, body {
 		width: 100%;
 		margin-bottom: 5%;
 		font-size: 20px;
-	} 
+	}  
+    .end_buttons{
+        width: 100%;
+        border-left: 0px solid black;
+        border-right:0px solid black;
+        font-size: 20px;
+    }
 	#controll_setting, #debug_setting{
 		display: none;
 	}
