@@ -41,6 +41,48 @@
 		<div id="start_header">PuncH Sucker</div>
 		<div class="start_buttons" id="start_game">Start Punching!</div>
 		<div class="start_buttons" id="get_info">How is this working!?</div>
+		<div id="info_panel">
+			<div id="wrapper">
+				<div id="close_info_panel">x</div>
+				<div id="content"> 
+					<div id="subHeader">What do I have to do?</div>
+					<div id="subSection">
+						<img id="target_img" src="assets/textures/target.png"/>
+						Punch as many of these Targets as you can. But the Clock is ticking against you.
+						So better hurry up!
+					</div>
+					<div id="subHeader">How do I controll this?</div>
+					<div id="subSection">
+						Two ways of controlling are supported. WebCam only works if your Browser supports WebRTC. 
+						You can switch the controlls by clicking middle Button in the top right corner of your screen.</br></br>
+						<b>Keyboard:</b></br>
+						<div class="key_row">
+							<div class="key">a</div>
+							<div class="key">a</div>
+							Move left / right
+						</div>
+						<div class="key_row">
+							<div class="key">o</div>
+							<div class="key">p</div>		
+							Punch left / right
+						</div>
+						<b>WebCam:</b>
+						<div> 
+							Lean to the left to move left & Lean to the right to move right. 
+							Punch to the top right corner to throw a punch at a target with the right hand
+							and to the top left corner for the left hand.</br>
+							Try to position yourself that your shoulders are about at the half point of the webcam feed.
+							You can test this by activing the "Debug-Layer" with the bottom button in the top right corner.
+							The red square indicates the center of motion and determines where your game character is moving at.
+							Some simple advice to get the best posible motion detection:</br></br>
+							- Make sure the environment is illuminted well and evenly</br>
+							- Position yourself as explained above with your shoulders being about at the vertical half</br>
+							- Punch into the top left or right half of the webcam feed
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 	<!-- Game Screen --> 

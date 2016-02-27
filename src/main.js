@@ -41,6 +41,8 @@ var fsm = StateMachine.create({
 		game.stopGame(); 
 		// Show Finish Screen
 		panels.showFinishScreen();
+		//end timer
+		timer.end(); 
     },
     
     onend:  		function(event, from, to, msg) {
@@ -128,6 +130,12 @@ var panels = {
 	},
 	updateTimer: function(){
 		
+	},
+	showInfo: function(){
+		$("#info_panel").fadeIn();
+	},
+	hideInfo: function(){
+		$("#info_panel").fadeOut();
 	}
 }  
 
@@ -146,9 +154,17 @@ $("#end_game").click(function(){
 	fsm.end();
 });
 
+$("#get_info").click(function(){
+	panels.showInfo();
+});
+
+$("#close_info_panel").click(function(){
+	panels.hideInfo();
+});
+
 //Toggle Controll => To keyboard
 $("#chose_webcam").click(function(){
-	$().toastmessage('showNoticeToast', 'WebCam Controll Active');
+	$().toastmessage('showNoticeToast', 'Keyboard Controll Active');
     $(this).hide();
     $("#chose_keyboard").show();
     game.webCam = false;
@@ -156,7 +172,7 @@ $("#chose_webcam").click(function(){
 
 //Toggle Controll => To webcam
 $("#chose_keyboard").click(function(){
-	$().toastmessage('showNoticeToast', 'Keyboard Controll Active');
+	$().toastmessage('showNoticeToast', 'WebCam Controll Active');
     $(this).hide();
     $("#chose_webcam").show();
 	game.webCam = true;
@@ -165,7 +181,7 @@ $("#chose_keyboard").click(function(){
 
 //Toggle Debug => on
 $("#debug_off").click(function(){
-	$().toastmessage('showNoticeToast', 'Debug OFF');
+	$().toastmessage('showNoticeToast', 'Debug ON');
     $(this).hide();
     $("#debug_on").show();
     debug = true;	// variable in motionDetection.js
@@ -174,7 +190,7 @@ $("#debug_off").click(function(){
 
 //Toggle Debug => off
 $("#debug_on").click(function(){
-	$().toastmessage('showNoticeToast', 'Debug ON');
+	$().toastmessage('showNoticeToast', 'Debug OFF');
     $(this).hide();
     $("#debug_off").show();
 	debug = false;	// variable in motionDetction.js

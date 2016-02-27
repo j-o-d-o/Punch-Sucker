@@ -3,7 +3,8 @@ var Punchers = (function () {
     function Punchers(scene, camera) {
 		this.scene = scene;
 		this.camera = camera;
-		this.blockAnimations = false;
+		this.blockAnimationsLeft = false;
+		this.blockAnimationsRight = false;
     }
 
 	Punchers.prototype.init = function(){
@@ -78,12 +79,12 @@ var Punchers = (function () {
 		var _this = this;
 		
 		//start animation
-		if(!this.blockAnimations){
+		if(!this.blockAnimationsLeft){
 			var _this = this;
 			this.scene.beginAnimation(this.armLeft, 0, 30, false, 3, function () {
-				_this.blockAnimations = false;
+				_this.blockAnimationsLeft = false;
 			}); 
-			this.blockAnimations = true;
+			this.blockAnimationsLeft = true;
 		}
 	} 
 		
@@ -126,12 +127,12 @@ var Punchers = (function () {
 		//start animation
 		
 				//start animation
-		if(!this.blockAnimations){
+		if(!this.blockAnimationsRight){
 			var _this = this;
 			this.scene.beginAnimation(this.armRight, 0, 30, false, 3, function () {
-				_this.blockAnimations = false;
+				_this.blockAnimationsRight = false;
 			}); 
-			this.blockAnimations = true;
+			this.blockAnimationsRight = true;
 		}
 	}
  

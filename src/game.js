@@ -10,7 +10,8 @@ var Game = (function () {
 		this.discArray = []; 
 		this.hitTargets = [];
 		this.webCam = true;
-		this.punchBlocked = false;
+		this.punchBlockedLeft = false;
+		this.punchBlockedRight = false;
 		
         this.canvas = document.getElementById('renderCanvas');
         this.engine = new BABYLON.Engine(this.canvas, true);
@@ -255,23 +256,22 @@ var Game = (function () {
 			
 			//punching
 			if(Key.isDown(Key.PUNCH_LEFT)){
-				if(this.punchBlocked){
+				if(this.punchBlockedLeft){
 					this.sound.playPunchBlocked();
 				}
 				else{
-					setTimeout(function(){ _this.punchBlocked = false;}, 1800);
-					this.punchBlocked = true;
+					setTimeout(function(){ _this.punchBlockedLeft = false;}, 1900);
+					this.punchBlockedLeft = true;
 					this.punchLeft(); 
 				}
 			} 
 			else if(Key.isDown(Key.PUNCH_RIGHT)){
-				if(this.punchBlocked){
-					// Do some sound ?
+				if(this.punchBlockedRight){
 					this.sound.playPunchBlocked();
 				}
 				else{
-					setTimeout(function(){ _this.punchBlocked = false;}, 1800);
-					this.punchBlocked = true;
+					setTimeout(function(){ _this.punchBlockedRight = false;}, 1900);
+					this.punchBlockedRight = true;
 					this.punchRight();
 				}
 			}
