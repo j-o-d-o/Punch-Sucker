@@ -44,8 +44,8 @@ function initMotionDetection(){
 				video.src = stream;
 			}
 			setTimeout(updateDetection, 8000/60);
-		}, function (error) {
-			alert("WebRTC not available");
+		}, function (error) {  
+			alert("WebRTC not available. You can switch to keyboard controll by clicking the camera button in the top right corner!");
 		}); 
 	} catch (error) { 
 		alert(error);
